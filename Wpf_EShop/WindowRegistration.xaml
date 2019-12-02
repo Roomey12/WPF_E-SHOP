@@ -1,0 +1,50 @@
+﻿<Window x:Class="WPF_E_SHOP.WindowRegistration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_E_SHOP"
+        mc:Ignorable="d"
+        Title="WindowRegistration" Height="400" Width="600">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\roomey\source\repos\WPF_E-SHOP\WPF_E-SHOP\fon.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="127*"></ColumnDefinition>
+            <ColumnDefinition Width="297*"></ColumnDefinition>
+            <ColumnDefinition Width="118*"></ColumnDefinition>
+            <ColumnDefinition Width="297*"></ColumnDefinition>
+            <ColumnDefinition Width="127*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" FontSize="30" Grid.ColumnSpan="5" Background="LightBlue" Margin="0,0,0,15" Grid.RowSpan="2">Регистрация</Label>
+        <TextBox x:Name="NameField" Grid.Column="1" Grid.Row="2" FontSize="20" LostFocus="NameField_LostFocus" GotFocus="NameField_GotFocus"/>
+        <TextBox x:Name="PhoneField" Grid.Column="1" Grid.Row="4" FontSize="20" LostFocus="PhoneField_LostFocus" GotFocus="PhoneField_GotFocus"/>
+        <TextBox x:Name="CityField" Grid.Column="1" Grid.Row="6" FontSize="20" LostFocus="CityField_LostFocus" GotFocus="CityField_GotFocus"/>
+        <TextBox x:Name="EmailField" Grid.Column="1" Grid.Row="8" FontSize="20" LostFocus="EmailField_LostFocus" GotFocus="EmailField_GotFocus"/>
+
+        <TextBox x:Name="SurnameField" Grid.Column="3" Grid.Row="2" FontSize="20" LostFocus="SurnameField_LostFocus" GotFocus="SurnameField_GotFocus"/>
+        <TextBox x:Name="CardField" Grid.Column="3" Grid.Row="4" FontSize="20" LostFocus="CardField_LostFocus" GotFocus="CardField_GotFocus"/>
+        <TextBox x:Name="StreetField" Grid.Column="3" Grid.Row="6" FontSize="20" LostFocus="StreetField_LostFocus" GotFocus="StreetField_GotFocus"/>
+        <PasswordBox x:Name="PassField" Grid.Column="3" Grid.Row="8" FontSize="20" LostFocus="PassField_LostFocus" GotFocus="PassField_GotFocus"></PasswordBox>
+
+        <Button x:Name="regButton" Grid.Column="3" Grid.Row="10" Content="Зарегистрироваться" FontSize="16" Background="LimeGreen" MouseEnter="regButton_MouseEnter" Click="regButton_Click"></Button>
+        <Label x:Name="loginLabel" Grid.Column="1" Grid.Row="10" Content="Уже есть аккаунт?" FontSize="15" MouseEnter="loginLabel_MouseEnter" MouseLeave="loginLabel_MouseLeave" MouseDoubleClick="loginLabel_MouseDoubleClick"></Label>
+    </Grid>
+</Window>

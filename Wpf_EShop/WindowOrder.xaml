@@ -1,0 +1,77 @@
+﻿<Window x:Class="WPF_E_SHOP.WindowOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:app="http://schemas.android.com/tools"
+        xmlns:local="clr-namespace:WPF_E_SHOP"
+        mc:Ignorable="d"
+        Title="WindowOrder" Height="450" Width="800">
+    <Grid Margin="-5">
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\roomey\source\repos\WPF_E-SHOP\WPF_E-SHOP\fon.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="67*"></ColumnDefinition>
+            <ColumnDefinition Width="67*"></ColumnDefinition>
+            <ColumnDefinition Width="67*"></ColumnDefinition>
+            <ColumnDefinition Width="67*"></ColumnDefinition>
+            <ColumnDefinition Width="67*"></ColumnDefinition>
+            <ColumnDefinition Width="67*"></ColumnDefinition>
+            <ColumnDefinition Width="67*"></ColumnDefinition>
+            <ColumnDefinition Width="67*"></ColumnDefinition>
+            <ColumnDefinition Width="100*"></ColumnDefinition>
+            <ColumnDefinition Width="31*"></ColumnDefinition>
+            <ColumnDefinition Width="103*"></ColumnDefinition>
+            <ColumnDefinition Width="55*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Label Content="       Оформление заказа" HorizontalContentAlignment="Left" Grid.ColumnSpan="12" Background="LightBlue" VerticalContentAlignment="Center" FontSize="30" Grid.RowSpan="2"/>
+        <Button x:Name="buttonMenu" Grid.Row="0" Grid.Column="9" Width="100" HorizontalAlignment="Center" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="0,18,0,10">
+            <TextBlock TextAlignment="Center" Width="90" Height="44"> Вернуться в <LineBreak/> главное меню</TextBlock>
+        </Button>
+
+        <Label x:Name="label2" Grid.Row="2" Grid.Column="6" Content="Заказ №" Grid.ColumnSpan="3" Margin="0,0,10,35" Grid.RowSpan="2" HorizontalContentAlignment="Center" FontSize="16"></Label>
+
+        <ListBox x:Name="basketBox" Grid.Row="3" Grid.ColumnSpan="4" Margin="32,0,36,36" Grid.RowSpan="7" SelectionChanged="basketBox_SelectionChanged"/>
+        <Label Content="Вместе" Grid.Row="9" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" Margin="0,0,59,36" Grid.RowSpan="2" Grid.ColumnSpan="2"></Label>
+        <TextBox x:Name="basketTotalPriceBox" Grid.Row="9" TextAlignment="Right" Grid.Column="2" FontSize="22" Grid.ColumnSpan="2" Margin="6,0,36,36" Grid.RowSpan="2"/>
+
+        <Label Grid.Row="3" Grid.Column="3" Content="Имя" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="3" Margin="67,0,66,36" Grid.RowSpan="2"></Label>
+        <TextBox x:Name="nameField" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="3" Margin="0,0,10,36" Grid.RowSpan="2" FontSize="20"></TextBox>
+        <Label Grid.Row="5" Grid.Column="4" Content="Почта" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="0,0,1,0"/>
+        <TextBox x:Name="emailField" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="4" Margin="64,0,10,0" FontSize="20"></TextBox>
+        <Label Grid.Row="6" Grid.Column="3" Content="Город" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Margin="66,29,1,0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="cityField" Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="4" Margin="64,36,10,0" Grid.RowSpan="2" FontSize="20"></TextBox>
+        <Label Grid.Row="8" Grid.Column="4" Content="Карта" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="1,24,66,2" Grid.RowSpan="2"></Label>
+        <TextBox x:Name="cardField" Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="3" Margin="0,0,10,36" Grid.RowSpan="2" FontSize="20"></TextBox>
+
+        <Label Grid.Row="3" Grid.Column="8" Content="Фамилия" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,1,36" Grid.RowSpan="2"></Label>
+        <TextBox x:Name="surnameField" Grid.Row="2" Grid.Column="8" Grid.ColumnSpan="4" Margin="98,34,27,2" Grid.RowSpan="2" FontSize="20"></TextBox>
+        <Label Grid.Row="5" Grid.Column="8" Content="Телефон" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="phoneField" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="4" Margin="96,0,27,34" FontSize="20" Grid.RowSpan="2"/>
+        <Label Grid.Row="6" Grid.Column="7" Content="Улица" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Margin="66,29,6,2" Grid.RowSpan="2" Grid.ColumnSpan="2"></Label>
+        <TextBox x:Name="streetField" Grid.Row="7" Grid.Column="8" Grid.ColumnSpan="4" Margin="96,2,27,2" FontSize="20"/>
+        <Label Grid.Row="8" Grid.Column="7" Content="Дата доставки" FontSize="13" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="66,24,0,2" Grid.RowSpan="2" Grid.ColumnSpan="2"></Label>
+
+        <DatePicker x:Name="calen" Grid.Row="8" Grid.Column="8" Grid.ColumnSpan="4" Margin="98,24,27,2" Grid.RowSpan="2" FontSize="20" DisplayDateStart="{x:Static sys:DateTime.Today}"/>
+
+        <Button x:Name="orderButton" Grid.Row="11" Grid.Column="8" Grid.ColumnSpan="4" Margin="98,1,47,34" Grid.RowSpan="2" Background="LimeGreen" Content="Оформить заказ" FontSize="16" Click="orderButton_Click"></Button>
+    </Grid>
+</Window>
